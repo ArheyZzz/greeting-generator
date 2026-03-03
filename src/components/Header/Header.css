@@ -1,0 +1,8 @@
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  padding: 1rem;
+  background: turquoise;
+}

@@ -1,0 +1,23 @@
+.app {
+  display: flex;
+  /* Заменяем center на stretch */
+  align-items: stretch;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  /* Убираем justify-content: flex-start, так как stretch сам все распределит */
+}
+
+.app-settings {
+  display: flex;
+  flex-direction: column;
+  /* Оставляем выравнивание контента внутри левой колонки */
+  align-items: flex-start;
+  gap: 1rem;
+  width: 50%;
+}
+
+.app-result {
+  display: flex;
+  /* Чтобы внутренний блок .result тоже мог тянуться */
+  width: 50%;
+}
