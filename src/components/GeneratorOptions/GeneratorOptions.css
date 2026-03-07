@@ -1,51 +1,61 @@
-.generator-options {
-  width: 100%;
+.generator-options-language_and_image {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
+  gap: 1.5rem;
+  /* Немного увеличим отступ для чистоты */
+  width: 100%;
+  margin-top: 1rem;
 }
 
-.generator-options-options {
-  width: 100%;
+/* Контейнер для текста "Язык:" */
+.generator-options-language_and_image label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.checkbox-container {
   display: flex;
-  /* justify-content: center; */
-  gap: 0.5rem;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #e6edf3;
+  /* Светлый текст для читаемости на темном */
+  transition: color 0.2s ease;
+}
+
+.checkbox-container:hover {
+  color: #2dd4bf;
+}
+
+.checkbox-container input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #2dd4bf;
+  /* Цвет галочки в тон Neo-Mint */
+  background: #0d1117;
+  border: 1px solid #30363d;
+}
+
+/* Если чекбокс заблокирован (disabled) */
+.checkbox-container input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkbox-container input:disabled+label {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .generator-options_items {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-
-}
-
-.generator-options_items .active {
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
-}
-
-.generator-options-select {
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: #f9f9f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.holiday-selector-input {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-
-  resize: none;
-  flex-shrink: 0;
-  outline: none;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  /* Увеличим зазор между кнопками стилей */
 }

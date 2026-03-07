@@ -1,4 +1,38 @@
 .button {
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
+  /* Градиент в стиле Neo-Mint / Azure как на твоих кнопках */
+  background: linear-gradient(135deg, #2dd4bf 0%, #3b82f6 100%);
+  color: #010409;
+  /* Темный текст для лучшей читаемости на светлом градиенте */
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Мягкое неоновое свечение */
+  box-shadow: 0 4px 15px rgba(45, 212, 191, 0.2);
+}
+
+.button:hover {
+  /* Немного смещаем градиент при наведении */
+  background: linear-gradient(135deg, #34e8d1 0%, #4facfe 100%);
+  transform: translateY(-2px);
+  /* Усиливаем свечение */
+  box-shadow: 0 8px 25px rgba(45, 212, 191, 0.4);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(45, 212, 191, 0.2);
+}
+
+/* Эффект при загрузке (если кнопка заблокирована) */
+.button:disabled {
+  background: #1f2937;
+  color: #4b5563;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
 }

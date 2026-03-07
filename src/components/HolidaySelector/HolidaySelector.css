@@ -1,44 +1,68 @@
-.holiday-selector {
-  width: 100%;
+.holiday-selector-title,
+.recipient-info-title,
+.generator-options-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
+  align-items: center;
+  gap: 10px;
+  color: #f3f4f6;
+  /* Светлый заголовок */
+}
+
+.holiday-selector-title span,
+.recipient-info-title span,
+.generator-options-title span {
+  /* Градиент как на кнопках в портфолио */
+  background: linear-gradient(135deg, #2dd4bf 0%, #3b82f6 100%);
+  color: #030712;
+  /* Темная цифра на светлом фоне */
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  box-shadow: 0 0 10px rgba(45, 212, 191, 0.3);
 }
 
 .holiday-selector-options {
-  width: 100%;
   display: flex;
-  justify-content: center;
-  gap: 0.5rem;
+  gap: 10px;
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
-.holiday-selector-option {
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.holiday-selector-option,
+.generator-options-select {
+  flex: 1;
+  padding: 0.8rem;
+  /* Темный фон кнопок выбора */
+  background: #111827;
+  border: 1px solid #30363d;
+  border-radius: 10px;
   cursor: pointer;
-  background-color: #f9f9f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%
+  text-align: center;
+  transition: all 0.2s ease;
+  color: #9ca3af;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
-.holiday-selector-option.active {
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
+.holiday-selector-option:hover,
+.generator-options-select:hover {
+  border-color: rgba(45, 212, 191, 0.5);
+  background: #1f2937;
+  color: #f3f4f6;
 }
 
-.holiday-selector-input {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-
-  resize: none;
-  flex-shrink: 0;
-  outline: none;
+.holiday-selector-option.active,
+.generator-options-select.active {
+  /* Активное состояние в неоновом стиле */
+  border-color: #2dd4bf;
+  background: rgba(45, 212, 191, 0.1);
+  color: #2dd4bf;
+  box-shadow: 0 0 15px rgba(45, 212, 191, 0.1);
 }

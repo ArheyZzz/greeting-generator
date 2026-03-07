@@ -1,8 +1,28 @@
 .header {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  position: fixed;
-  padding: 1rem;
-  background: turquoise;
+  padding: 1rem 2rem;
+  /* Темный прозрачный фон для эффекта стекла */
+  background: rgba(3, 7, 18, 0.8);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  /* Тонкая темная граница снизу */
+  border-bottom: 1px solid rgba(48, 54, 61, 0.8);
+  display: flex;
+  justify-content: center;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  /* Тот самый неоновый Neo-Mint */
+  color: #2dd4bf;
+  /* Легкое свечение текста логотипа */
+  text-shadow: 0 0 10px rgba(45, 212, 191, 0.3);
+  letter-spacing: 0.5px;
 }

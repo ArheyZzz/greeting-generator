@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  /* Темный глубокий фон как в портфолио */
+  background-color: #030712;
+  /* Если хочешь легкий радиальный градиент для объема: */
+  /* background: radial-gradient(circle at top right, #0d1117 0%, #030712 100%); */
+  min-height: 100vh;
+  color: #f3f4f6;
+  /* Светлый текст для контраста */
 }

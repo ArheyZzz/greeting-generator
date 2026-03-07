@@ -11,10 +11,10 @@ import './GeneratorOptions.css';
 export default function GeneratorOptions() {
 	const style = useStyle();
 	const language = useLanguage();
-	const isCreateImage = useCreateImage(); // текущее значение (boolean)
+	const isCreateImage = useCreateImage();
 	const setStyle = useStyleActions();
 	const setLanguage = useLanguageActions();
-	const toggleImage = useCreateImageActions(); // экшен для смены состояния
+	const toggleImage = useCreateImageActions();
 
 	const handleStyleSelect = (holiday: string) => {
 		setStyle(holiday);
@@ -82,15 +82,16 @@ export default function GeneratorOptions() {
 
 				<div className='checkbox-container'>
 					<input
+						disabled
 						id='generateImage'
 						type='checkbox'
-						// 1. Добавляем checked, чтобы чекбокс отображал состояние из стора
 						checked={isCreateImage}
-						// 2. Оборачиваем вызов в анонимную функцию, чтобы он срабатывал при клике
-						// Либо передаем новое значение, либо просто инвертируем старое
 						onChange={() => toggleImage(!isCreateImage)}
 					/>
-					<label htmlFor='generateImage'>Сгенерировать картинку</label>
+					<label htmlFor='generateImage'>
+						Сгенерировать картинку (https://image.pollinations.ai - временно не
+						работает)
+					</label>
 				</div>
 			</div>
 		</div>

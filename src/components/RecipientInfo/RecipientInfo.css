@@ -1,61 +1,49 @@
-.recipient-info {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 20px;
-}
-
-.recipient-info-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
 .recipient-info-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.recipient-info-inputs__item {
-  width: calc(50% - 0.25rem);
-}
-
-.recipient-info-inputs__item label {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  display: block;
-}
-
-.recipient-info-inputs__item input,
-.recipient-info-inputs__item select,
-.recipient-info-inputs__item textarea {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: #f9f9f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .recipient-info-inputs__item:last-child {
-  width: 100%;
+  grid-column: span 2;
 }
 
+input,
+select,
 textarea {
-  box-sizing: border-box;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-
-  resize: none;
-  flex-shrink: 0;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  /* Темный фон инпутов */
+  background: #0d1117;
+  /* Граница в тон карточек портфолио */
+  border: 1px solid #30363d;
+  border-radius: 10px;
   outline: none;
+  font-family: inherit;
+  color: #f3f4f6;
+  /* Светлый текст при вводе */
+  transition: all 0.2s ease;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6b7280;
+  /* Цвет подсказки */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  /* Неоновый мятный при фокусе */
+  border-color: #2dd4bf;
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+  background: #111827;
+}
+
+/* Стилизация выпадающего списка (select) для темной темы */
+select option {
+  background: #0d1117;
+  color: #f3f4f6;
 }

@@ -38,10 +38,10 @@ export default function Button({ children }: { children?: React.ReactNode }) {
 			);
 			setGreeting(result);
 			console.log('Успех! Результат:', result);
-			setLoading(false); // Устанавливаем loading в false после получения результата
+			setLoading(false);
 		} catch (e) {
 			console.error('Что-то пошло не так в компоненте:', e);
-			setLoading(false); // Устанавливаем loading в false в случае ошибки
+			setLoading(false);
 		}
 	};
 

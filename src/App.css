@@ -1,23 +1,46 @@
 .app {
   display: flex;
-  /* Заменяем center на stretch */
   align-items: stretch;
   gap: 2rem;
-  padding: 4rem 2rem;
-  /* Убираем justify-content: flex-start, так как stretch сам все распределит */
+  padding: 6rem 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Добавим плавное появление всего контента при загрузке */
+  animation: fadeIn 0.8s ease-out;
 }
 
 .app-settings {
   display: flex;
   flex-direction: column;
-  /* Оставляем выравнивание контента внутри левой колонки */
-  align-items: flex-start;
-  gap: 1rem;
+  gap: 1.5rem;
   width: 50%;
 }
 
 .app-result {
   display: flex;
-  /* Чтобы внутренний блок .result тоже мог тянуться */
   width: 50%;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+    padding-top: 5rem;
+    gap: 1.5rem;
+  }
+
+  .app-settings,
+  .app-result {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
